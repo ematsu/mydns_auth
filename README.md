@@ -17,24 +17,28 @@ $ chmod 600 ./conf.yaml
 
 Step2:
 
+```bash
 edit "conf.yaml".
+
     MYDNSJP_MASTERID:  <Enter your masterid>
     MYDNSJP_MASTERPWD: <Enter your password>
+
+```
 
 ## Usage
 
 ```bash
 $ sudo certbot certonly --keep ¥
                         --no-eff-email ¥
-												--preferred-challenges dns ¥
-												--manual ¥
-												--manual-auth-hook /your/domain/directory/mydns_auth-master/txtregist.rb ¥
-												--manual-cleanup-hook /your/domain/directory/mydns_auth-master/txtdelete.rb ¥
-												--manual-public-ip-logging-ok ¥
-												--server https://acme-v02.api.letsencrypt.org/directory ¥
-												--agree-tos ¥
-												-m <your registered email address> ¥
-												-d <your domain> -d *.<your domain>
+                        --preferred-challenges dns ¥
+                        --manual ¥
+                        --manual-auth-hook /your/domain/directory/mydns_auth-master/txtregist.rb ¥
+                        --manual-cleanup-hook /your/domain/directory/mydns_auth-master/txtdelete.rb ¥
+                        --manual-public-ip-logging-ok ¥
+                        --server https://acme-v02.api.letsencrypt.org/directory ¥
+                        --agree-tos ¥
+                        -m <your registered email address> ¥
+                        -d <your domain> -d *.<your domain>
 ```
 
 ## Development
